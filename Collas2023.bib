@@ -1,0 +1,2141 @@
+@Proceedings{CoLLAs-2023,
+  booktitle =	 {Proceedings of The 2nd Conference on Lifelong
+                  Learning Agents},
+  name =	 {Conference on Lifelong Learning Agents},
+  shortname =	 {CoLLAs},
+  editor =	 {Chandar, Sarath and Pascanu, Razvan and Sedghi,
+                  Hanie and Precup, Doina},
+  volume =	 232,
+  year =	 2023,
+  start =	 {2023-08-22},
+  end =		 {2023-08-25},
+  published =	 {2023-11-20},
+  conference_url ={https://lifelong-ml.cc/},
+  conference_number =2,
+  address =	 {McGill University, Montr'{e}al, Qu'{e}bec, Canada}
+}
+
+@InProceedings{du23a,
+  title =	 {EMO: Episodic Memory Optimization for Few-Shot
+                  Meta-Learning},
+  author =	 {Du, Yingjun and Shen, Jiayi and Zhen, Xiantong and
+                  Snoek, Cees G.M.},
+  abstract =	 {Few-shot meta-learning presents a challenge for
+                  gradient descent optimization due to the limited
+                  number of training samples per task. To address this
+                  issue, we propose an episodic memory optimization
+                  for meta-learning, we call EMO, which is inspired by
+                  the human ability to recall past learning
+                  experiences from the brain’s memory. EMO retains the
+                  gradient history of past experienced tasks in
+                  external memory, enabling few-shot learning in a
+                  memory-augmented way. By learning to retain and
+                  recall the learning process of past training tasks,
+                  EMO nudges parameter updates in the right direction,
+                  even when the gradients provided by a limited number
+                  of examples are uninformative. We prove
+                  theoretically that our algorithm converges for
+                  smooth, strongly convex objectives. EMO is generic,
+                  flexible, and model-agnostic, making it a simple
+                  plug-and-play optimizer that can be seamlessly
+                  embedded into existing optimization-based few-shot
+                  meta-learning approaches. Empirical results show
+                  that EMO scales well with most few-shot
+                  classification benchmarks and improves the
+                  performance of optimization-based meta-learning
+                  methods, resulting in accelerated convergence.},
+  year =	 2023,
+  pages =	 {1-20},
+  video =	 {https://youtu.be/Sdvb_pyyzpE},
+}
+
+@InProceedings{rahimi-kalahroudi23,
+  title =	 {Replay Buffer with Local Forgetting for Adapting to
+                  Local Environment Changes in Deep Model-Based
+                  Reinforcement Learning},
+  author =	 {Rahimi-Kalahroudi, Ali and Rajendran, Janarthanan
+                  and Momennejad, Ida and van Seijen, Harm and
+                  Chandar, Sarath},
+  abstract =	 {One of the key behavioral characteristics used in
+                  neuroscience to determine whether the subject of
+                  study—be it a rodent or a human—exhibits model-based
+                  learning is effective adaptation to local changes in
+                  the environment, a particular form of adaptivity
+                  that is the focus of this work. In reinforcement
+                  learning, however, recent work has shown that modern
+                  deep model-based reinforcement-learning (MBRL)
+                  methods adapt poorly to local environment
+                  changes. An explanation for this mismatch is that
+                  MBRL methods are typically designed with
+                  sample-efficiency on a single task in mind and the
+                  requirements for effective adaptation are
+                  substantially higher, both in terms of the learned
+                  world model and the planning routine. One
+                  particularly challenging requirement is that the
+                  learned world model has to be sufficiently accurate
+                  throughout relevant parts of the state-space. This
+                  is challenging for deep-learning-based world models
+                  due to catastrophic forgetting. And while a replay
+                  buffer can mitigate the effects of catastrophic
+                  forgetting, the traditional first-in-first-out
+                  replay buffer precludes effective adaptation due to
+                  maintaining stale data. In this work, we show that a
+                  conceptually simple variation of this traditional
+                  replay buffer is able to overcome this
+                  limitation. By removing only samples from the buffer
+                  from the local neighbourhood of the newly observed
+                  samples, deep world models can be built that
+                  maintain their accuracy across the state-space,
+                  while also being able to effectively adapt to local
+                  changes in the reward function. We demonstrate this
+                  by applying our replay-buffer variation to a deep
+                  version of the classical Dyna method, as well as to
+                  recent methods such as PlaNet and DreamerV2,
+                  demonstrating that deep model-based methods can
+                  adapt effectively as well to local changes in the
+                  environment.},
+  year =	 2023,
+  pages =	 {21-42},
+  video =	 {https://youtu.be/j9FKnJJFMvs},
+}
+
+@InProceedings{lesort23,
+  title =	 {Challenging Common Assumptions about Catastrophic
+                  Forgetting and Knowledge Accumulation},
+  author =	 {Lesort, Timoth\'ee and Ostapenko, Oleksiy and
+                  Rodr\'iguez, Pau and Misra, Diganta and Arefin, Md
+                  Rifat and Charlin, Laurent and Rish, Irina},
+  abstract =	 {Building learning agents that can progressively
+                  learn and accumulate knowledge is the core goal of
+                  the continual learning (CL) research
+                  field. Unfortunately, training a model on new data
+                  usually compromises the performance on past data. In
+                  the CL literature, this effect is referred to as
+                  catastrophic forgetting (CF). CF has been largely
+                  studied, and a plethora of methods have been
+                  proposed to address it on short sequences of
+                  non-overlapping tasks. In such setups, CF usually
+                  leads to a quick and significant drop in performance
+                  in past tasks. Nevertheless, despite CF, recent work
+                  showed that SGD training on linear models
+                  accumulates knowledge in a CL regression setup. This
+                  phenomenon becomes especially visible when tasks
+                  reoccur. We might then wonder if DNNs trained with
+                  SGD or any standard gradient-based optimization
+                  accumulate knowledge in such a way. Such phenomena
+                  would have interesting consequences for applying
+                  DNNs to real continual scenarios. Indeed, standard
+                  gradient-based optimization methods are
+                  significantly less computationally expensive than
+                  existing CL algorithms. In this paper, we study the
+                  progressive knowledge accumulation (KA) in DNNs
+                  trained with gradient-based algorithms in long
+                  sequences of tasks with data re-occurrence. We
+                  propose a new framework, SCoLe (Scaling Continual
+                  Learning), to investigate KA and discover that
+                  catastrophic forgetting has a limited effect on DNNs
+                  trained with SGD. When trained on long sequences
+                  with data sparsely re-occurring, the overall
+                  accuracy improves, which might be counter-intuitive
+                  given our understanding of catastrophic forgetting
+                  in CL. We empirically investigate KA in DNNs under
+                  various data occurrence frequencies. We show that
+                  the catastrophic forgetting usually observed in
+                  short scenarios does not prevent knowledge
+                  accumulation in longer ones. Moreover, propose
+                  simple and scalable strategies to increase knowledge
+                  accumulation in DNNs.},
+  year =	 2023,
+  pages =	 {43-65},
+  video =	 {https://youtu.be/jKHYSvkqJCw},
+}
+
+@InProceedings{chandak23,
+  title =	 {Differentially Private Algorithms for Efficient
+                  Online Matroid Optimization},
+  author =	 {Chandak, Kushagra and Hu, Bingshan and Hegde, Nidhi},
+  abstract =	 {A matroid bandit is the online version of
+                  combinatorial optimization on a matroid, in which
+                  the learner chooses $K$ actions from a set of $L$
+                  actions that can form a matroid basis. Many
+                  real-world applications such as recommendation
+                  systems can be modeled as matroid bandits. In such
+                  learning problems, the revealed data may involve
+                  sensitive user information. Therefore, privacy
+                  considerations are crucial. We propose two simple
+                  and practical differentially private algorithms for
+                  matroid bandits built upon the ideas of Upper
+                  Confidence Bound and Thompson Sampling. The key idea
+                  behind our first algorithm, Differentially Private
+                  Upper Confidence Bound for Matroid Bandits
+                  (DPUCB-MAT), is to construct differentially private
+                  upper confidence bounds. The second algorithm,
+                  Differentially Private Thompson Sampling for Matroid
+                  Bandits (DPTS-MAT), is based on the idea of drawing
+                  random samples from differentially private posterior
+                  distributions. Both algorithms achieve $O\left(
+                  L\ln(n)/\Delta + LK\ln(n) \min\left\{K, \ln(n)
+                  \right\}/\varepsilon \right)$ regret bounds, where
+                  $\Delta$ denotes the mean reward gap and
+                  $\varepsilon$ is the required privacy parameter. Our
+                  derived regret bounds rely on novel technical
+                  arguments that deeply explore the special structure
+                  of matroids. We show a novel way to construct
+                  ordered pairs between the played actions and the
+                  optimal actions, which contributes to decomposing a
+                  matroid bandit problem into $K$ stochastic
+                  multi-armed bandit problems. Finally, we conduct
+                  experiments to demonstrate the empirical performance
+                  of our proposed learning algorithms by using both
+                  synthetic and real-world movie-recommendation
+                  datasets.},
+  year =	 2023,
+  pages =	 {66-88},
+  video =	 {https://youtu.be/LvdVM62F_XE},
+}
+
+@InProceedings{caccia23,
+  title =	 {Task-Agnostic Continual Reinforcement Learning:
+                  Gaining Insights and Overcoming Challenges},
+  author =	 {Caccia, Massimo and Mueller, Jonas and Kim, Taesup
+                  and Charlin, Laurent and Fakoor, Rasool},
+  abstract =	 {Continual learning (CL) enables the development of
+                  models and agents that learn from a sequence of
+                  tasks while addressing the limitations of standard
+                  deep learning approaches, such as catastrophic
+                  forgetting. In this work, we investigate the factors
+                  that contribute to the performance differences
+                  between task-agnostic CL and multi-task (MTL)
+                  agents. We pose two hypotheses: (1) task-agnostic
+                  methods might provide advantages in settings with
+                  limited data, computation, or high dimensionality,
+                  and (2) faster adaptation may be particularly
+                  beneficial in continual learning settings, helping
+                  to mitigate the effects of catastrophic forgetting.
+                  To investigate these hypotheses, we introduce a
+                  replay-based recurrent reinforcement learning (3RL)
+                  methodology for task-agnostic CL agents. We assess
+                  3RL on a synthetic task and the Meta-World
+                  benchmark, which includes 50 unique manipulation
+                  tasks. Our results demonstrate that 3RL outperforms
+                  baseline methods and can even surpass its multi-task
+                  equivalent in challenging settings with high
+                  dimensionality. We also show that the recurrent
+                  task-agnostic agent consistently outperforms or
+                  matches the performance of its transformer-based
+                  counterpart.  These findings provide insights into
+                  the advantages of task-agnostic CL over task-aware
+                  MTL approaches and highlight the potential of
+                  task-agnostic methods in resource-constrained,
+                  high-dimensional, and multi-task environments.},
+  year =	 2023,
+  pages =	 {89-119},
+  video =	 {https://youtu.be/BygdWeYMNKU},
+}
+
+@InProceedings{du23b,
+  title =	 {Vision-Language Models as Success Detectors},
+  author =	 {Du, Yuqing and Konyushkova, Ksenia and Denil, Misha
+                  and Raju, Akhil and Landon, Jessica and Hill, Felix
+                  and de Freitas, Nando and Cabi, Serkan},
+  abstract =	 {Detecting successful behaviour is crucial for
+                  training intelligent agents. As such, generalisable
+                  reward models are a prerequisite for agents that can
+                  learn to generalise their behaviour. In this work we
+                  focus on developing robust success detectors that
+                  leverage large, pretrained vision-language models
+                  (Flamingo, Alayrac et al. (2022)) and human reward
+                  annotations. Concretely, we treat success detection
+                  as a visual question answering (VQA) problem,
+                  denoted SuccessVQA. We study three vastly different
+                  domains: (i) interactive language-conditioned agents
+                  in a simulated household, (ii) real world robotic
+                  manipulation, and (iii) “in-the-wild” human
+                  egocentric videos. We investigate the generalisation
+                  properties of a Flamingo-based success detection
+                  model across unseen language and visual changes in
+                  the first two domains, and find that the proposed
+                  method is able to outperform bespoke reward models
+                  in out-of-distribution test scenarios with either
+                  variation. In the last domain of “in-the-wild” human
+                  videos, we show that success detection on unseen
+                  real videos presents an even more challenging
+                  generalisation task warranting future work. We hope
+                  our results encourage further work in real world
+                  success detection and reward modelling with
+                  pretrained vision-language models.},
+  year =	 2023,
+  pages =	 {120-136},
+  video =	 {https://youtu.be/RgEnCgot-2g},
+}
+
+@InProceedings{nisioti23,
+  title =	 {Autotelic Reinforcement Learning in Multi-Agent
+                  Environments},
+  author =	 {Nisioti, Eleni and Masquil, Elias and Hamon, Gautier
+                  and Moulin-Frier, Cl\'ement},
+  abstract =	 { In the intrinsically motivated skills acquisition
+                  problem, the agent is set in an environment with-
+                  out any pre-defined goals and needs to acquire an
+                  open-ended repertoire of skills. To do so the agent
+                  needs to be autotelic (deriving from the Greek auto
+                  (self) and telos (end goal)): it needs to generate
+                  goals and learn to achieve them following its own
+                  intrinsic motivation rather than external
+                  supervision. Autotelic agents have so far been
+                  considered in isolation. But many applications of
+                  open-ended learning entail groups of
+                  agents. Multi-agent environments pose an additional
+                  challenge for autotelic agents: to discover and
+                  master goals that require cooperation agents must
+                  pursue them simultaneously, but they have low
+                  chances of doing so if they sample them
+                  independently. In this work, we propose a new
+                  learning paradigm for modelling such settings, the
+                  Decentralized Intrinsically Motivated Skills
+                  Acquisition Problem (Dec-IMSAP), and employ it to
+                  solve cooperative navigation tasks. First, we show
+                  that agents setting their goals independently fail
+                  to master the full diversity of goals. Then, we show
+                  that a sufficient condition for achieving this is to
+                  ensure that a group aligns its goals, i.e., the
+                  agents pursue the same cooperative goal. Our
+                  empirical analysis shows that alignment enables
+                  specialization, an efficient strategy for
+                  cooperation. Finally, we intro- duce the
+                  Goal-coordination game, a fully-decentralized
+                  emergent communication algorithm, where goal
+                  alignment emerges from the maximization of
+                  individual rewards in multi-goal cooperative
+                  environments and show that it is able to reach equal
+                  performance to a centralized training baseline that
+                  guarantees aligned goals. To our knowledge, this is
+                  the first contribution addressing the problem of
+                  intrinsically motivated multi-agent goal exploration
+                  in a decentralized training paradigm.},
+  year =	 2023,
+  pages =	 {137-161},
+  video =	 {https://youtu.be/Wj22riG3q5c},
+}
+
+@InProceedings{linderman23,
+  title =	 {Fine-grain Inference on Out-of-Distribution Data
+                  with Hierarchical Classification},
+  author =	 {Linderman, Randolph and Zhang, Jingyang and
+                  Inkawhich, Nathan and Li, Hai and Chen, Yiran},
+  abstract =	 {Machine learning methods must be trusted to make
+                  appropriate decisions in real-world environments,
+                  even when faced with out-of-distribution (OOD)
+                  samples. Many current approaches simply aim to
+                  detect OOD examples and alert the user when an
+                  unrecognized input is given. However, when the OOD
+                  sample significantly overlaps with the training
+                  data, a binary anomaly detection is not
+                  interpretable or explainable, and provides little
+                  information to the user. We propose a new model for
+                  OOD detection that makes predictions at varying
+                  levels of granularity---as the inputs become more
+                  ambiguous, the model predictions become coarser and
+                  more conservative. Consider an animal classifier
+                  that encounters an unknown bird species and a
+                  car. Both cases are OOD, but the user gains more
+                  information if the classifier recognizes that its
+                  uncertainty over the particular species is too large
+                  and predicts ``bird'' instead of detecting it as
+                  OOD. Furthermore, we diagnose the classifier's
+                  performance at each level of the hierarchy improving
+                  the explainability and interpretability of the
+                  model's predictions. We demonstrate the
+                  effectiveness of hierarchical classifiers for both
+                  fine- and coarse-grained OOD tasks.},
+  year =	 2023,
+  pages =	 {162-183},
+  video =	 {https://youtu.be/_0V-DEnftg4},
+}
+
+@InProceedings{kessler23,
+  title =	 {The Effectiveness of World Models for Continual
+                  Reinforcement Learning},
+  author =	 {Kessler, Samuel and Ostaszewski, Mateusz and
+                  Bortkiewicz, Micha\l Pawe\l and \.{Z}arski, Mateusz
+                  and Wolczyk, Maciej and Parker-Holder, Jack and
+                  Roberts, Stephen J. and Mi\lo\'s, Piotr },
+  abstract =	 {World models power some of the most efficient
+                  reinforcement learning algorithms. In this work, we
+                  showcase that they can be harnessed for continual
+                  learning – a situation when the agent faces changing
+                  environments. World models typically employ a replay
+                  buffer for training, which can be naturally extended
+                  to continual learning. We systematically study how
+                  different selective experience replay methods affect
+                  performance, forgetting, and transfer. We also
+                  provide recommendations regarding various modeling
+                  options for using world models. The best set of
+                  choices is called Continual-Dreamer, it is
+                  task-agnostic and utilizes the world model for
+                  continual exploration. Continual-Dreamer is sample
+                  efficient and outperforms state-of-the-art
+                  task-agnostic continual reinforcement learning
+                  methods on Minigrid and Minihack benchmarks.},
+  year =	 2023,
+  pages =	 {184-204},
+  video =	 {https://youtu.be/UFhXzrpGVtw},
+}
+
+@InProceedings{colas23,
+  title =	 {Augmenting Autotelic Agents with Large Language
+                  Models},
+  author =	 {Colas, C\'edric and Teodorescu, Laetitia and
+                  Oudeyer, Pierre-Yves and Yuan, Xingdi and C\^ot\'e,
+                  Marc-Alexandre},
+  abstract =	 {Humans learn to master open-ended repertoires of
+                  skills by imagining and practicing their own
+                  goals. This autotelic learning process, literally
+                  the pursuit of self-generated (auto) goals (telos),
+                  becomes more and more open-ended as the goals become
+                  more diverse, abstract and creative. The resulting
+                  exploration of the space of possible skills is
+                  supported by an inter-individual exploration: goal
+                  representations are culturally evolved and
+                  transmitted across individuals, in particular using
+                  language.  Current artificial agents mostly rely on
+                  predefined goal representations corresponding to
+                  goal spaces that are either bounded (e.g. list of
+                  instructions), or unbounded (e.g. the space of
+                  possible visual inputs) but are rarely endowed with
+                  the ability to reshape their goal representations,
+                  to form new abstractions or to imagine creative
+                  goals.  In this paper, we introduce a language model
+                  augmented autotelic agent (LMA3) that leverages a
+                  pretrained language model (LM) to support the
+                  representation, generation and learning of diverse,
+                  abstract, human-relevant goals.  The LM is used as
+                  an imperfect model of human cultural transmission;
+                  an attempt to capture aspects of humans'
+                  common-sense, intuitive physics and overall
+                  interests. Specifically, it supports three key
+                  components of the autotelic architecture: 1) a
+                  relabeler that describes the goals achieved in the
+                  agent's trajectories, 2) a goal generator that
+                  suggests new high-level goals along with their
+                  decomposition into subgoals the agent already
+                  masters, and 3) reward functions for each of these
+                  goals. Without relying on any hand-coded goal
+                  representations, reward functions or curriculum, we
+                  show that LMA3 agents learn to master a large
+                  diversity of skills in a task-agnostic text-based
+                  environment.  },
+  year =	 2023,
+  pages =	 {205-226},
+  video =	 {https://youtu.be/2_gNMTeHNX8},
+}
+
+@InProceedings{huang23,
+  title =	 {Towards Single Source Domain Generalisation in
+                  Trajectory Prediction: A Motion Prior based
+                  Approach},
+  author =	 {Huang, Renhao and Tompkins, Anthony and Pagnucco,
+                  Maurice and Song, Yang},
+  abstract =	 {Trajectory prediction is an important task in many
+                  real-world applications. However, data-driven
+                  approaches typically suffer from dramatic
+                  performance degradation when applied to unseen
+                  environments due to the inevitable domain shift
+                  brought by changes in factors such as pedestrian
+                  walking speed, the geometry of the environment,
+                  etc. In particular, when a dataset does not contain
+                  sufficient samples to determine prediction rules,
+                  the trained model can easily consider some important
+                  features as domain variant. We propose a framework
+                  that integrates a simple motion prior with deep
+                  learning to achieve, for the first time, exceptional
+                  single-source domain generalisation for trajectory
+                  prediction, in which deep learning models are only
+                  trained using a single domain and then applied to
+                  multiple novel domains. Instead of predicting the
+                  exact future positions directly from the model, we
+                  first assign a constant velocity motion prior to
+                  each pedestrian and then learn a conditional
+                  trajectory prediction model to predict residuals to
+                  the motion prior using auxiliary information from
+                  the surrounding environment. This strategy combines
+                  deep learning models with knowledge priors to
+                  simultaneously simplify training and enhance
+                  generalisation, allowing the model to focus on
+                  disentangling data-driven spatio-temporal factors
+                  while not overfitting to individual motions. We also
+                  propose a novel Train-on-Best-Motion strategy that
+                  can alleviate the adverse effects of domain shift,
+                  brought on by changes in environment, by exploiting
+                  invariances inherent to the choice of motion
+                  prior. Experiments across multiple datasets of
+                  different domains demonstrate that our approach
+                  reduces the influence of domain shift and also
+                  generalizes better to unseen environments.},
+  year =	 2023,
+  pages =	 {227-243},
+  video =	 {https://youtu.be/UMv8eIIkreg},
+}
+
+@InProceedings{roy23,
+  title =	 {RaSP: Relation-aware Semantic Prior for Weakly
+                  Supervised Incremental Segmentation},
+  author =	 {Roy, Subhankar and Volpi, Riccardo and Csurka,
+                  Gabriela and Larlus, Diane},
+  abstract =	 {Class-incremental semantic image segmentation
+                  assumes multiple model updates, each enriching the
+                  model to segment new categories. This is typically
+                  carried out by providing expensive pixel-level
+                  annotations to the training algorithm for all new
+                  objects, limiting the adoption of such methods in
+                  practical applications. Approaches that solely
+                  require image-level labels offer an attractive
+                  alternative, yet, such coarse annotations lack
+                  precise information about the location and boundary
+                  of the new objects. In this paper we argue that,
+                  since classes represent not just indices but
+                  semantic entities, the conceptual relationships
+                  between them can provide valuable information that
+                  should be leveraged. We propose a weakly supervised
+                  approach that exploits such semantic relations to
+                  transfer objectness prior from the previously
+                  learned classes into the new ones, complementing the
+                  supervisory signal from image-level labels. We
+                  validate our approach on a number of continual
+                  learning tasks, and show how even a simple pairwise
+                  interaction between classes can significantly
+                  improve the segmentation mask quality of both old
+                  and new classes. We show these conclusions still
+                  hold for longer and, hence, more realistic sequences
+                  of tasks and for a challenging few-shot scenario.},
+  year =	 2023,
+  pages =	 {244-269},
+  video =	 {https://youtu.be/Lu3Nalct99E},
+}
+
+@InProceedings{mediratta23,
+  title =	 {Stabilizing Unsupervised Environment Design with a
+                  Learned Adversary},
+  author =	 {Mediratta, Ishita and Jiang, Minqi and
+                  Parker-Holder, Jack and Dennis, Michael and
+                  Vinitsky, Eugene and Rockt\"aschel, Tim},
+  abstract =	 {A key challenge in training generally-capable agents
+                  is the design of training tasks that facilitate
+                  broad generalization and robustness to environment
+                  variations. This challenge motivates the problem
+                  setting of \emph{Unsupervised Environment Design}
+                  (UED), whereby a student agent trains on an adaptive
+                  distribution of tasks proposed by a teacher agent. A
+                  pioneering approach for UED is PAIRED, which uses
+                  reinforcement learning (RL) to train a teacher
+                  policy to design tasks from scratch, making it
+                  possible to directly generate tasks that are adapted
+                  to the agent's current capabilities. Despite its
+                  strong theoretical backing, PAIRED suffers from a
+                  variety of challenges that hinder its practical
+                  performance. Thus, state-of-the-art methods
+                  currently rely on \emph{curation} and
+                  \emph{mutation} rather than \emph{generation} of new
+                  tasks. In this work, we investigate several key
+                  shortcomings of PAIRED and propose solutions for
+                  each shortcoming. As a result, we make it possible
+                  for PAIRED to match or exceed state-of-the-art
+                  methods, producing robust agents in several
+                  challenging procedurally-generated environments,
+                  including a partially-observed maze navigation task
+                  and a continuous-control car racing environment. We
+                  believe this work motivates a renewed emphasis on
+                  UED methods based on learned models that directly
+                  generate challenging environments, potentially
+                  unlocking more open-ended RL training and, as a
+                  result, more general agents.},
+  year =	 2023,
+  pages =	 {270-291},
+  video =	 {https://youtu.be/uvJZBpoaQyU},
+}
+
+@InProceedings{zhang23,
+  title =	 {Learning Meta Representations for Agents in
+                  Multi-Agent Reinforcement Learning},
+  author =	 {Zhang, Shenao and Shen, Li and Han, Lei and Shen,
+                  Li},
+  abstract =	 {In multi-agent reinforcement learning, the behaviors
+                  that agents learn in a single Markov Game (MG) are
+                  typically confined to the given agent number. Every
+                  single MG induced by varying the population may
+                  possess distinct optimal joint strategies and
+                  game-specific knowledge, which are modeled
+                  independently in modern multi-agent reinforcement
+                  learning algorithms. In this work, our focus is on
+                  creating agents that can generalize across
+                  population-varying MGs. Instead of learning a
+                  unimodal policy, each agent learns a policy set
+                  comprising effective strategies across a variety of
+                  games. To achieve this, we propose Meta
+                  Representations for Agents (MRA) that explicitly
+                  models the game-common and game-specific strategic
+                  knowledge. By representing the policy sets with
+                  multi-modal latent policies, the game-common
+                  strategic knowledge and diverse strategic modes are
+                  discovered through an iterative optimization
+                  procedure. We prove that by approximately maximizing
+                  the resulting constrained mutual information
+                  objective, the policies can reach Nash Equilibrium
+                  in every evaluation MG when the latent space is
+                  sufficiently large. When deploying MRA in practical
+                  settings with limited latent space sizes, fast
+                  adaptation can be achieved by leveraging the
+                  first-order gradient information. Extensive
+                  experiments demonstrate the effectiveness of MRA in
+                  improving training performance and generalization
+                  ability in challenging evaluation games.},
+  year =	 2023,
+  pages =	 {292-317},
+  video =	 {https://youtu.be/PZkkds6s1Q0},
+}
+
+@InProceedings{hemati23a,
+  title =	 {Partial Hypernetworks for Continual Learning},
+  author =	 {Hemati, Hamed and Lomonaco, Vincenzo and Bacciu,
+                  Davide and Borth, Damian},
+  abstract =	 {Hypernetworks mitigate forgetting in continual
+                  learning (CL) by generating task-dependent weights
+                  and penalizing weight changes at a meta-model
+                  level. Unfortunately, generating all weights is not
+                  only computationally expensive for larger
+                  architectures, but also, it is not well understood
+                  whether generating all model weights is
+                  necessary. Inspired by latent replay methods in CL,
+                  we propose partial weight generation for the final
+                  layers of a model using hypernetworks while freezing
+                  the initial layers. With this objective, we first
+                  answer the question of how many layers can be frozen
+                  without compromising the final performance. Through
+                  several experiments, we empirically show that the
+                  number of layers that can be frozen is proportional
+                  to the distributional similarity in the CL
+                  stream. Then, to demonstrate the effectiveness of
+                  hypernetworks, we show that noisy streams can
+                  significantly impact the performance of latent
+                  replay methods, leading to increased forgetting when
+                  features from noisy experiences are replayed with
+                  old samples. In contrast, partial hypernetworks are
+                  more robust to noise by maintaining accuracy on
+                  previous experiences. Finally, we conduct
+                  experiments on the split CIFAR-100 and TinyImagenet
+                  benchmarks and compare different versions of partial
+                  hypernetworks to latent replay methods. We conclude
+                  that partial weight generation using hypernetworks
+                  is a promising solution to the problem of forgetting
+                  in neural networks. It can provide an effective
+                  balance between computation and final test accuracy
+                  in CL streams.},
+  year =	 2023,
+  pages =	 {318-336},
+  video =	 {https://youtu.be/2F9mSBm7Xf8},
+}
+
+@InProceedings{pisupati23,
+  title =	 {Human inductive biases for aversive continual
+                  learning — a hierarchical Bayesian nonparametric
+                  model},
+  author =	 {Pisupati, Sashank and Berwian, Isabel M and Chiu,
+                  Jamie and Ren, Yongjing and Niv, Yael},
+  abstract =	 {Humans and animals often display remarkable
+                  continual learning abilities, adapting quickly to
+                  changing environments while retaining, reusing, and
+                  accumulating old knowledge over a
+                  lifetime. Unfortunately, in environments with
+                  adverse outcomes, the inductive biases supporting
+                  such forms of learning can turn maladaptive,
+                  yielding persistent negative beliefs that are hard
+                  to extinguish, such as those prevalent in anxiety
+                  disorders. Here, we present and model human
+                  behavioral data from a fear-conditioning task with
+                  changing latent contexts, in which participants had
+                  to predict whether visual stimuli would be followed
+                  by an aversive scream. We show that participants'
+                  learning in our task spans three different regimes —
+                  with old knowledge either being updated, discarded
+                  (forgotten) or retained and reused in new contexts
+                  (remembered) by different participants. The latter
+                  regime corresponds to (maladaptive) spontaneous
+                  recovery of fear. We demonstrate using simulations
+                  that these behavioral regimes can be captured by
+                  varying inductive biases in Bayesian non-parametric
+                  models of contextual learning. In particular, we
+                  show that the ``remembering" regime can be produced
+                  by ``persistent" variants of hierarchical Dirichlet
+                  process priors over contexts and negatively biased
+                  ``deterministic" beta distribution priors over
+                  outcomes. Such inductive biases correspond well to
+                  widely observed ``core beliefs" that may have
+                  adaptive value in some lifelong-learning
+                  environments, at the cost of being maladaptive in
+                  other environments and tasks such as ours. Our work
+                  offers a tractable window into human inductive
+                  biases for continual learning algorithms, and could
+                  potentially help identify individual differences in
+                  learning strategies relevant for response to
+                  psychotherapy.},
+  year =	 2023,
+  pages =	 {337-346},
+  video =	 {https://youtu.be/pJCHM8oiK4I},
+}
+
+@InProceedings{silva23,
+  title =	 {Prospective Learning: Principled Extrapolation to
+                  the Future},
+  author =	 {De Silva, Ashwin and Ramesh, Rahul and Ungar, Lyle
+                  and Shuler, Marshall Hussain and Cowan, Noah J. and
+                  Platt, Michael and Li, Chen and Isik, Leyla and Roh,
+                  Seung-Eon and Charles, Adam and Venkataraman,
+                  Archana and Caffo, Brian and How, Javier J. and
+                  Kebschull, Justus M and Krakauer, John W. and
+                  Bichuch, Maxim and Kinfu, Kaleab Alemayehu and
+                  Yezerets, Eva and Jayaraman, Dinesh and Shin, Jong
+                  M. and Villar, Soledad and Phillips, Ian and Priebe,
+                  Carey E. and Hartung, Thomas and Miller, Michael
+                  I. and Dey, Jayanta and Huang, Ningyuan and Eaton,
+                  Eric and Etienne-Cummings, Ralph and Ogburn,
+                  Elizabeth L. and Burns, Randal and Osuagwu, Onyema
+                  and Mensh, Brett and Muotri, Alysson R. and Brown,
+                  Julia and White, Chris and Yang, Weiwei and
+                  Verstynen, Andrei A. Rusu Timothy and Kording,
+                  Konrad P. and Chaudhari, Pratik and Vogelstein,
+                  Joshua T.},
+  abstract =	 {Learning is a process which can update decision
+                  rules, based on past experience, such that future
+                  performance improves. Traditionally, machine
+                  learning is often evaluated under the assumption
+                  that the future will be identical to the past in
+                  distribution or change adversarially. But these
+                  assumptions can be either too optimistic or
+                  pessimistic for many problems in the real
+                  world. Real world scenarios evolve over multiple
+                  spatiotemporal scales with partially predictable
+                  dynamics. Here we reformulate the learning problem
+                  to one that centers around this idea of dynamic
+                  futures that are partially learnable. We conjecture
+                  that certain sequences of tasks are not
+                  retrospectively learnable (in which the data
+                  distribution is fixed), but are prospectively
+                  learnable (in which distributions may be dynamic),
+                  suggesting that prospective learning is more
+                  difficult in kind than retrospective learning. We
+                  argue that prospective learning more accurately
+                  characterizes many real world problems that (1)
+                  currently stymie existing artificial intelligence
+                  solutions and/or (2) lack adequate explanations for
+                  how natural intelligences solve them. Thus, studying
+                  prospective learning will lead to deeper insights
+                  and solutions to currently vexing challenges in both
+                  natural and artificial intelligences.},
+  year =	 2023,
+  pages =	 {347-357},
+  video =	 {https://youtu.be/DOgBhzs7YKs},
+}
+
+@InProceedings{li23a,
+  title =	 {Embodied Active Learning of Relational State
+                  Abstractions for Bilevel Planning},
+  author =	 {Li, Amber and Silver, Tom},
+  abstract =	 {State abstraction is an effective technique for
+                  planning in robotics environments with continuous
+                  states and actions, long task horizons, and sparse
+                  feedback. In object-oriented environments,
+                  predicates are a particularly useful form of state
+                  abstraction because of their compatibility with
+                  symbolic planners and their capacity for relational
+                  generalization. However, to plan with predicates,
+                  the agent must be able to interpret them in
+                  continuous environment states (i.e., ground the
+                  symbols). Manually programming predicate
+                  interpretations can be difficult, so we would
+                  instead like to learn them from data. We propose an
+                  embodied active learning paradigm where the agent
+                  learns predicate interpretations through online
+                  interaction with an expert. For example, after
+                  taking actions in a block stacking environment, the
+                  agent may ask the expert: "Is On(block1, block2)
+                  true?'' From this experience, the agent learns to
+                  plan: it learns neural predicate interpretations,
+                  symbolic planning operators, and neural samplers
+                  that can be used for bilevel planning. During
+                  exploration, the agent plans to learn: it uses its
+                  current models to select actions towards generating
+                  informative expert queries. We learn predicate
+                  interpretations as ensembles of neural networks and
+                  use their entropy to measure the informativeness of
+                  potential queries. We evaluate this approach in
+                  three robotic environments and find that it
+                  consistently outperforms six baselines while
+                  exhibiting sample efficiency in two key metrics:
+                  number of environment interactions, and number of
+                  queries to the expert.},
+  year =	 2023,
+  pages =	 {358-375},
+  video =	 {https://youtu.be/4yzyLXwyNlE},
+}
+
+@InProceedings{nekoei23a,
+  title =	 {Dealing With Non-stationarity in Decentralized
+                  Cooperative Multi-Agent Deep Reinforcement Learning
+                  via Multi-Timescale Learning},
+  author =	 {Nekoei, Hadi and Badrinaaraayanan, Akilesh and
+                  Sinha, Amit and Amini, Mohammad and Rajendran,
+                  Janarthanan and Mahajan, Aditya and Chandar, Sarath},
+  abstract =	 {Decentralized cooperative multi-agent deep
+                  reinforcement learning (MARL) can be a versatile
+                  learning framework, particularly in scenarios where
+                  centralized training is either not possible or not
+                  practical. One of the critical challenges in
+                  decentralized deep MARL is the non-stationarity of
+                  the learning environment when multiple agents are
+                  learning concurrently. A commonly used and efficient
+                  scheme for decentralized MARL is independent
+                  learning in which agents concurrently update their
+                  policies independently of each other. We first show
+                  that independent learning does not always converge,
+                  while sequential learning where agents update their
+                  policies one after another in a sequence is
+                  guaranteed to converge to an agent-by-agent optimal
+                  solution. In sequential learning, when one agent
+                  updates its policy, all other agent's policies are
+                  kept fixed, alleviating the challenge of
+                  non-stationarity due to simultaneous updates in
+                  other agents' policies. However, it can be slow
+                  because only one agent is learning at any
+                  time. Therefore it might also not always be
+                  practical. In this work, we propose a decentralized
+                  cooperative MARL algorithm based on multi-timescale
+                  learning. In multi-timescale learning, all agents
+                  learn simultaneously, but at different learning
+                  rates. In our proposed method, when one agent
+                  updates its policy, other agents are allowed to
+                  update their policies as well, but at a slower
+                  rate. This speeds up sequential learning, while also
+                  minimizing non-stationarity caused by other agents
+                  updating concurrently. Multi-timescale learning
+                  outperforms state-of-the-art decentralized learning
+                  methods on a set of challenging multi-agent
+                  cooperative tasks in the epymarl benchmark. This can
+                  be seen as a first step towards more general
+                  decentralized cooperative deep MARL methods based on
+                  multi-timescale learning.},
+  year =	 2023,
+  pages =	 {376-398},
+  video =	 {https://youtu.be/LQs62ut1cwI},
+}
+
+@InProceedings{petit23,
+  title =	 {PlaStIL: Plastic and Stable Exemplar-Free
+                  Class-Incremental Learning},
+  author =	 {Petit, Gr\'egoire and Popescu, Adrian and Belouadah,
+                  Eden and Picard, David and Delezoide, Bertrand},
+  abstract =	 {Plasticity and stability are needed in
+                  class-incremental learning in order to learn from
+                  new data while preserving past knowledge.  Due to
+                  catastrophic forgetting, finding a compromise
+                  between these two properties is particularly
+                  challenging when no memory buffer is available.
+                  Mainstream methods need to store two deep models
+                  since they integrate new classes using fine tuning
+                  with knowledge distillation from the previous
+                  incremental state.  We propose a method which has
+                  similar number of parameters but distributes them
+                  differently in order to find a better balance
+                  between plasticity and stability.  Following an
+                  approach already deployed by transfer-based
+                  incremental methods, we freeze the feature extractor
+                  after the initial state.  Classes in the oldest
+                  incremental states are trained with this frozen
+                  extractor to ensure stability.  Recent classes are
+                  predicted using partially fine-tuned models in order
+                  to introduce plasticity.  Our proposed plasticity
+                  layer can be incorporated to any transfer-based
+                  method designed for exemplar-free incremental
+                  learning, and we apply it to two such methods.
+                  Evaluation is done with three large-scale datasets.
+                  Results show that performance gains are obtained in
+                  all tested configurations compared to existing
+                  methods. },
+  year =	 2023,
+  pages =	 {399-414},
+  video =	 {https://youtu.be/X5ugMBdPEEU},
+}
+
+@InProceedings{yang23,
+  title =	 {Partial Index Tracking: A Meta-Learning Approach},
+  author =	 {Yang, Yongxin and Hospedales, Timothy},
+  abstract =	 {Partial index tracking aims to cost effectively
+                  replicate the performance of a benchmark index by
+                  using a small number of assets. It is usually
+                  formulated as a regression problem, but solving it
+                  subject to real-world constraints is non-trivial.
+                  For example, the common $\ell_1$ regularised model
+                  for sparse regression (i.e., LASSO) is not
+                  compatible with those constraints. In this work, we
+                  meta-learn a sparse asset selection and weighting
+                  strategy that subsequently enables effective partial
+                  index tracking by quadratic programming. In
+                  particular, we adopt an element-wise $\ell_1$ norm
+                  for sparse regularisation, and meta-learn the weight
+                  for each $\ell_1$ term. Rather than meta-learning a
+                  fixed set of hyper-parameters, we meta-learn an
+                  inductive predictor for them based on market
+                  history, which allows generalisation over time, and
+                  even across markets. Experiments are conducted on
+                  four indices from different countries, and the
+                  empirical results demonstrate the superiority of our
+                  method over other baselines. The code is released at
+                  https://github.com/qmfin/MetaIndexTracker.},
+  year =	 2023,
+  pages =	 {415-436},
+  video =	 {https://youtu.be/IJT4ZtK1m5s},
+}
+
+@InProceedings{hemati23b,
+  title =	 {Class-Incremental Learning with Repetition},
+  author =	 {Hemati, Hamed and Cossu, Andrea and Carta, Antonio
+                  and Hurtado, Julio and Pellegrini, Lorenzo and
+                  Bacciu, Davide and Lomonaco, Vincenzo and Borth,
+                  Damian},
+  abstract =	 {Real-world data streams naturally include the
+                  repetition of previous concepts. From a Continual
+                  Learning (CL) perspective, repetition is a property
+                  of the environment and, unlike replay, cannot be
+                  controlled by the agent. Nowadays, the
+                  Class-Incremental (CI) scenario represents the
+                  leading test-bed for assessing and comparing CL
+                  strategies. This scenario type is very easy to use,
+                  but it never allows revisiting previously seen
+                  classes, thus completely neglecting the role of
+                  repetition. We focus on the family of
+                  Class-Incremental with Repetition (CIR) scenario,
+                  where repetition is embedded in the definition of
+                  the stream. We propose two stochastic stream
+                  generators that produce a wide range of CIR streams
+                  starting from a single dataset and a few
+                  interpretable control parameters. We conduct the
+                  first comprehensive evaluation of repetition in CL
+                  by studying the behavior of existing CL strategies
+                  under different CIR streams. We then present a novel
+                  replay strategy that exploits repetition and
+                  counteracts the natural imbalance present in the
+                  stream. On both CIFAR100 and TinyImageNet, our
+                  strategy outperforms other replay approaches, which
+                  are not designed for environments with repetition.},
+  year =	 2023,
+  pages =	 {437-455},
+  video =	 {https://youtu.be/ZORbaCZI2K8},
+}
+
+@InProceedings{malaviya23,
+  title =	 {Reducing Communication Overhead in Federated
+                  Learning for Pre-trained Language Models Using
+                  Parameter-Efficient Finetuning},
+  author =	 {Malaviya, Shubham and Shukla, Manish and Lodha,
+                  Sachin},
+  abstract =	 {Pre-trained language models are shown to be
+                  effective in solving real-world natural language
+                  problems. Due to privacy reasons, data may not
+                  always be available for pre-training or finetuning
+                  of the model. Federated learning (FL) is a
+                  privacy-preserving technique for model training, but
+                  it suffers from communication overhead when the
+                  model size is large. We show that
+                  parameter-efficient finetuning (PEFT) reduces
+                  communication costs while achieving good model
+                  performance in both supervised and semi-supervised
+                  federated learning. Also, often in real life, data
+                  for the target downstream task is not available, but
+                  it is relatively easy to obtain the data for other
+                  related tasks. To this end, our results on the
+                  task-level transferability of PEFT methods in
+                  federated learning show that the model achieves good
+                  zero-shot performance on target data when source
+                  data is from a similar task. Parameter-efficient
+                  finetuning can aid federated learning in building
+                  efficient, privacy-preserving Natural Language
+                  Processing (NLP) applications.},
+  year =	 2023,
+  pages =	 {456-469},
+  video =	 {https://youtu.be/SwwgZ8UlIi8},
+}
+
+@InProceedings{letourneau23,
+  title =	 {Time and temporal abstraction in continual learning:
+                  tradeoffs, analogies and regret in an active
+                  measuring setting},
+  author =	 {L\'etourneau, Vincent and Bellinger, Colin and
+                  Tamblyn, Isaac and Fraser, Maia},
+  abstract =	 {This conceptual paper provides theoretical results
+                  linking notions in semi-supervised learning (SSL)
+                  and hierarchical reinforcement learning (HRL) in the
+                  context of lifelong learning. Specifically, our
+                  construction sets up a direct analogy between
+                  intermediate representations in SSL and temporal
+                  abstraction in RL, highlighting the important role
+                  of factorization in both types of hierarchy and the
+                  relevance of partial labeling, resp. partial
+                  observation. The construction centres around a
+                  simple class of Partially Observed Markov Decision
+                  Processes (POMDPs) where we show tools and results
+                  from SSL imply lower bounds on regret holding for
+                  any RL algorithm without access to temporal
+                  abstraction. While our lower bound is for a
+                  restricted class of RL problems, it applies to
+                  arbitrary RL algorithms in this setting. The setting
+                  moreover features so-called “active measuring”, an
+                  aspect of widespread relevance in industrial
+                  control, but - possibly due to its lifelong learning
+                  flavour - not yet well-studied in RL. Our
+                  formalization makes it possible to think about
+                  tradeoffs that apply for such control problems.},
+  year =	 2023,
+  pages =	 {470-480},
+  video =	 {https://youtu.be/wc1-MeSXvBg},
+}
+
+@InProceedings{wang23,
+  title =	 {Self-trained Centroid Classifiers for
+                  Semi-supervised Cross-domain Few-shot Learning},
+  author =	 {Wang, Hongyu and Frank, Eibe and Pfahringer,
+                  Bernhard and Holmes, Geoffrey},
+  abstract =	 {State-of-the-art cross-domain few-shot learning
+                  methods for image classification apply knowledge
+                  transfer by fine-tuning deep feature extractors
+                  obtained from source domains on the small labelled
+                  dataset available for the target domain, generally
+                  in conjunction with a simple centroid-based
+                  classification head. Semi-supervised learning during
+                  the meta-test phase is an obvious approach to
+                  incorporating unlabelled data into cross-domain
+                  few-shot learning, but semi-supervised methods
+                  designed for larger sets of labelled data than those
+                  available in few-shot learning appear to easily go
+                  astray when applied in this setting. We propose an
+                  efficient semi-supervised learning method that
+                  applies self-training to the classification head
+                  only and show that it can yield very consistent
+                  improvements in average performance in the
+                  Meta-Dataset benchmark for cross-domain few-shot
+                  learning when applied with contemporary methods
+                  utilising centroid-based classification.},
+  year =	 2023,
+  pages =	 {481-492},
+  video =	 {https://youtu.be/fH3W-3D6GMc},
+}
+
+@InProceedings{powers23,
+  title =	 {Evaluating Continual Learning on a Home Robot},
+  author =	 {Powers, Sam and Gupta, Abhinav and Paxton, Chris},
+  abstract =	 {Robots in home environments need to be able to learn
+                  new skills continuously as data becomes available,
+                  becoming ever more capable over time while using as
+                  little real-world data as possible. However,
+                  traditional robot learning approaches typically
+                  assume large amounts of iid data, which is
+                  inconsistent with this goal. In contrast, continuous
+                  learning methods like CLEAR and SANE allow
+                  autonomous agents to learn off of a stream of
+                  non-iid samples; they, however, have not previously
+                  been demonstrated on real robotics platforms. In
+                  this work, we show how continuous learning methods
+                  can be adapted for use on a real, low-cost home
+                  robot, and in particular look at the case where we
+                  have extremely small numbers of examples, in a
+                  task-id-free setting. Specifically, we propose
+                  SANER, a method for continuously learning a library
+                  of skills, and \model{} (Attention-Based PointNet)
+                  as the backbone to support it. We learn four
+                  sequential kitchen tasks on a low-cost home robot,
+                  using only a handful of demonstrations per task.},
+  year =	 2023,
+  pages =	 {493-512},
+  video =	 {https://youtu.be/sasDRk2HdCU},
+}
+
+@InProceedings{li23b,
+  title =	 {Fixed Design Analysis of Regularization-Based
+                  Continual Learning},
+  author =	 {Li, Haoran and Wu, Jingfeng and Braverman, Vladimir},
+  abstract =	 {We consider a continual learning (CL) problem with
+                  two linear regression tasks in the fixed design
+                  setting, where the feature vectors are assumed fixed
+                  and the labels are assumed to be random
+                  variables. We consider an $\ell_2$-regularized CL
+                  algorithm, which computes an Ordinary Least Squares
+                  parameter to fit the first dataset, then computes
+                  another parameter that fits the second dataset under
+                  an $\ell_2$-regularization penalizing its deviation
+                  from the first parameter, and outputs the second
+                  parameter. For this algorithm, we provide tight
+                  upper and lower bounds on the average risk over the
+                  two tasks. Our risk bounds reveal a provable
+                  trade-off between forgetting and intransigence of
+                  the $\ell_2$-regularized CL algorithm: with a large
+                  regularization parameter, the algorithm output
+                  forgets less information about the first task but is
+                  intransigent to extract new information from the
+                  second task; and vice versa. Our results suggest
+                  that catastrophic forgetting could happen for CL
+                  with dissimilar tasks (under a precise similarity
+                  measurement), and that a well-tuned
+                  $\ell_2$-regularization can partially mitigate this
+                  issue by introducing intransigence.},
+  year =	 2023,
+  pages =	 {513-533},
+  video =	 {https://youtu.be/W1iFLETMzFs},
+}
+
+@InProceedings{galashov23,
+  title =	 {Continually learning representations at scale},
+  author =	 {Galashov, Alexandre and Mitrovic, Jovana and
+                  Tirumala, Dhruva and Teh, Yee Whye and Nguyen,
+                  Timothy and Chaudhry, Arslan and Pascanu, Razvan},
+  abstract =	 {Many widely used continual learning benchmarks
+                  follow a protocol that starts from an untrained,
+                  randomly initialized model that needs to
+                  sequentially learn a number of incoming tasks. To
+                  maximize interpretability of the results and to keep
+                  experiment length under control, often these tasks
+                  are formed from well-known medium to large size
+                  datasets such as CIFAR or ImageNet. Recently,
+                  however, large-scale pretrained representations,
+                  also referred to as foundation models, have achieved
+                  significant success across a wide range of
+                  traditional vision and language
+                  problems. Furthermore, the availability of these
+                  pretrained models and their use as starting point
+                  for training can be seen as a paradigm shift from
+                  the classical end-to-end learning.  This raises the
+                  question: How does this paradigm shift influence
+                  continual learning research? We attempt an answer,
+                  by firstly showing that many existing benchmarks are
+                  ill-equipped in this setting. The use of foundation
+                  model leads to state-of-art results on several
+                  existing and commonly used image classification
+                  continual learning benchmarks, from split CIFAR-100
+                  to split ImageNet. Additionally, there is at best a
+                  small gap between keeping the representations frozen
+                  versus tuning them. While this is indicative of the
+                  overlap between pretraining distribution and the
+                  benchmark distribution, it also shows that these
+                  benchmarks can not be used to explore how to
+                  continually learn the underlying
+                  representations. Secondly, we examine what
+                  differentiates continually learning from scratch
+                  versus when relying on pretrained models, where the
+                  representation is learned under a different
+                  objective. We highlight that this brings about new
+                  challenges and research questions that cannot be
+                  studied in the sanitised scenario of learning from
+                  scratch explored so far. },
+  year =	 2023,
+  pages =	 {534-547},
+  video =	 {https://youtu.be/pFHwqojGY9o},
+}
+
+@InProceedings{alver23,
+  title =	 {Minimal Value-Equivalent Partial Models for Scalable
+                  and Robust Planning in Lifelong Reinforcement
+                  Learning},
+  author =	 {Alver, Safa and Precup, Doina},
+  abstract =	 {Learning models of the environment from pure
+                  interaction is often considered an essential
+                  component of building lifelong reinforcement
+                  learning agents. However, the common practice in
+                  model-based reinforcement learning is to learn
+                  models that model every aspect of the agent's
+                  environment, regardless of whether they are
+                  important in coming up with optimal decisions or
+                  not. In this paper, we argue that such models are
+                  not particularly well-suited for performing scalable
+                  and robust planning in lifelong reinforcement
+                  learning scenarios and we propose new kinds of
+                  models that only model the relevant aspects of the
+                  environment, which we call \emph{minimal
+                  value-equivalent partial models}. After providing a
+                  formal definition for these models, we provide
+                  theoretical results demonstrating the scalability
+                  advantages of performing planning with such models
+                  and then perform experiments to empirically
+                  illustrate our theoretical results. Then, we provide
+                  some useful heuristics on how to learn these kinds
+                  of models with deep learning architectures and
+                  empirically demonstrate that models learned in such
+                  a way can allow for performing planning that is
+                  robust to distribution shifts and compounding model
+                  errors. Overall, both our theoretical and empirical
+                  results suggest that minimal value-equivalent
+                  partial models can provide significant benefits to
+                  performing scalable and robust planning in lifelong
+                  reinforcement learning scenarios. },
+  year =	 2023,
+  pages =	 {548-567},
+  video =	 {https://youtu.be/EPOAk4sig0Y},
+}
+
+@InProceedings{steccanella23,
+  title =	 {Hierarchical Representation Learning for Markov
+                  Decision Processes},
+  author =	 {Steccanella, Lorenzo and Totaro, Simone and Jonsson,
+                  Anders},
+  abstract =	 {In this paper, we present a novel method for
+                  learning reward-agnostic hierarchical
+                  representations of Markov Decision Processes. Our
+                  method works by partitioning the state space into
+                  subsets, and defines subtasks for performing
+                  transitions between the partitions. At the high
+                  level, we use model-based planning to decide which
+                  subtask to pursue next from a given partition. We
+                  formulate the problem of partitioning the state
+                  space as an optimization problem that can be solved
+                  using gradient descent given a set of sampled
+                  trajectories, making our method suitable for
+                  high-dimensional problems with large state
+                  spaces. We empirically validate the method, by
+                  showing that it can successfully learn useful
+                  hierarchical representations in domains with
+                  high-dimensional states. Once learned, the
+                  hierarchical representation can be used to solve
+                  different tasks in the given domain, thus
+                  generalizing knowledge across tasks.},
+  year =	 2023,
+  pages =	 {568-585},
+  video =	 {https://youtu.be/1DZ79Ql1Fnc},
+}
+
+@InProceedings{deforce23,
+  title =	 {MultiMix TFT: A Multi-task Mixed-Frequency Framework
+                  with Temporal Fusion Transformers},
+  author =	 {Deforce, Boje and Baesens, Bart and Diels, Jan and
+                  Asensio, Estefan\'ia Serral},
+  abstract =	 {Multi-task learning (MTL) has been increasingly
+                  recognized as an effective paradigm in time-series
+                  analysis for forecasting multiple related tasks
+                  concurrently. Prior MTL frameworks for time-series
+                  forecasting have typically been devised for tasks
+                  that share the same regular time
+                  frequencies. However, numerous real-world scenarios
+                  entail tasks measured at mixed, and often irregular,
+                  time frequencies. We propose a multi-task
+                  mixed-frequency (MultiMix) learning framework for
+                  time-series forecasting that addresses the
+                  challenges of mixed-frequency scenarios where tasks
+                  are measured at different and/or irregular time
+                  intervals. Our proposed framework leverages the
+                  relationships between mixed-frequency tasks to
+                  improve accuracy and robustness of time-series
+                  forecasting across tasks. The MultiMix framework is
+                  implemented using the state-of-the-art Temporal
+                  Fusion Transformer (TFT) and is evaluated in smart
+                  irrigation, where predicting mid-day stem water
+                  potential and soil water potential pose critical
+                  challenges. The MultiMix TFT enables joint
+                  forecasting of stem water potential, measured
+                  sparsely on irregular and infrequent time intervals,
+                  and soil water potential, measured on a daily time
+                  interval. The results show substantial improvements
+                  in stem water potential prediction over
+                  state-of-the-art baselines while achieving
+                  comparable performance for soil water
+                  potential. These results confirm the effectiveness
+                  of the proposed framework for addressing the
+                  mixed-frequency time-series forecasting problem in
+                  real-world settings. Code will be made available
+                  upon publication.},
+  year =	 2023,
+  pages =	 {586-600},
+  video =	 {https://youtu.be/1hqziyZl99g},
+}
+
+@InProceedings{merlin23,
+  title =	 {What Happens During Finetuning of Vision
+                  Transformers: An Invariance Based Investigation},
+  author =	 {Merlin, Gabriele and Nanda, Vedant and Rawal, Ruchit
+                  and Toneva, Mariya},
+  abstract =	 {The pretrain-finetune paradigm usually improves
+                  downstream performance over training a model from
+                  scratch on the same task, becoming commonplace
+                  across many areas of machine learning. While
+                  pretraining is empirically observed to be beneficial
+                  for a range of tasks, there is not a clear
+                  understanding yet of the reasons for this effect. In
+                  this work, we examine the relationship between
+                  pretrained vision transformers and the corresponding
+                  finetuned versions on several benchmark datasets and
+                  tasks. We present new metrics that specifically
+                  investigate the degree to which invariances learned
+                  by a pretrained model are retained or forgotten
+                  during finetuning. Using these metrics, we present a
+                  suite of empirical findings, including that
+                  pretraining induces transferable invariances in
+                  shallow layers and that invariances from deeper
+                  pretrained layers are compressed towards shallower
+                  layers during finetuning. Together, these findings
+                  contribute to understanding some of the reasons for
+                  the successes of pretrained models and the changes
+                  that a pretrained model undergoes when finetuned on
+                  a downstream task.  },
+  year =	 2023,
+  pages =	 {601-619},
+  video =	 {https://youtu.be/sBL6TbwdJQ0},
+}
+
+@InProceedings{abbas23,
+  title =	 {Loss of Plasticity in Continual Deep Reinforcement
+                  Learning},
+  author =	 {Abbas, Zaheer and Zhao, Rosie and Modayil, Joseph
+                  and White, Adam and Machado, Marlos C.},
+  abstract =	 {In this paper, we characterize the behavior of
+                  canonical value-based deep reinforcement learning
+                  (RL) approaches under varying degrees of
+                  non-stationarity. In particular, we demonstrate that
+                  deep RL agents lose their ability to learn good
+                  policies when they cycle through a sequence of Atari
+                  2600 games. This phenomenon is alluded to in prior
+                  work under various guises---e.g., loss of
+                  plasticity, implicit under-parameterization, primacy
+                  bias, and capacity loss. We investigate this
+                  phenomenon closely at scale and analyze how the
+                  weights, gradients, and activations change over time
+                  in several experiments with varying experimental
+                  conditions (e.g., similarity between games, number
+                  of games, number of frames per game). Our analysis
+                  shows that the activation footprint of the network
+                  becomes sparser, contributing to the diminishing
+                  gradients. We investigate a remarkably simple
+                  mitigation strategy---Concatenated ReLUs (CReLUs)
+                  activation function---and demonstrate its
+                  effectiveness in facilitating continual learning in
+                  a changing environment.},
+  year =	 2023,
+  pages =	 {620-636},
+  video =	 {https://youtu.be/0y8eg6U1GQo},
+}
+
+@InProceedings{bhagat23,
+  title =	 {Sample-Efficient Learning of Novel Visual Concepts},
+  author =	 {Bhagat, Sarthak and Stepputtis, Simon and Campbell,
+                  Joseph and Sycara, Katia},
+  abstract =	 {Despite the advances made in visual object
+                  recognition, state-of-the-art deep learning models
+                  struggle to effectively recognize novel objects in a
+                  few-shot setting where only a limited number of
+                  examples are provided. Unlike humans who excel at
+                  such tasks, these models often fail to leverage
+                  known relationships between entities in order to
+                  draw conclusions about such objects. In this work,
+                  we show that incorporating a symbolic knowledge
+                  graph into a state-of-the-art recognition model
+                  enables a new approach for effective few-shot
+                  classification. In our proposed neuro-symbolic
+                  architecture and training methodology, the knowledge
+                  graph is augmented with additional relationships
+                  extracted from a small set of examples, improving
+                  its ability to recognize novel objects by
+                  considering the presence of interconnected
+                  entities. Unlike existing few-shot classifiers, we
+                  show that this enables our model to incorporate not
+                  only objects but also abstract concepts and
+                  affordances. The existence of the knowledge graph
+                  also makes this approach amenable to
+                  interpretability through analysis of the
+                  relationships contained within it. We empirically
+                  show that our approach outperforms current
+                  state-of-the-art few-shot multi-label classification
+                  methods on the COCO dataset and evaluate the
+                  addition of abstract concepts and affordances on the
+                  Visual Genome dataset.  },
+  year =	 2023,
+  pages =	 {637-657},
+  video =	 {https://youtu.be/wUiWXgg_exU},
+}
+
+@InProceedings{dupuis23,
+  title =	 {VIBR: Learning View-Invariant Value Functions for
+                  Robust Visual Control},
+  author =	 {Dupuis, Tom and Rabarisoa, Jaonary and Pham,
+                  Quoc-Cuong and Filliat, David},
+  abstract =	 {End-to-end reinforcement learning on images showed
+                  significant progress in the recent years. Data-based
+                  approach leverage data augmentation and domain
+                  randomization while representation learning methods
+                  use auxiliary losses to learn task-relevant
+                  features. Yet, reinforcement still struggles in
+                  visually diverse environments full of distractions
+                  and spurious noise. In this work, we tackle the
+                  problem of robust visual control at its core and
+                  present VIBR (View-Invariant Bellman Residuals), a
+                  method that combines multi-view training and
+                  invariant prediction to reduce out-of-distribution
+                  (OOD) generalization gap for RL based visuomotor
+                  control. Our model-free approach improve baselines
+                  performances without the need of additional
+                  representation learning objectives and with limited
+                  additional computational cost. We show that VIBR
+                  outperforms existing methods on complex visuo-motor
+                  control environment with high visual perturbation.
+                  Our approach achieves state-of the-art results on
+                  the Distracting Control Suite benchmark, a
+                  challenging benchmark still not solved by current
+                  methods, where we evaluate the robustness to a
+                  number of visual perturbators, as well as OOD
+                  generalization and extrapolation capabilities.},
+  year =	 2023,
+  pages =	 {658-682},
+  video =	 {https://youtu.be/PprM2V470xw},
+}
+
+@InProceedings{chung23,
+  title =	 {Incremental Unsupervised Domain Adaptation on
+                  Evolving Graphs},
+  author =	 {Chung, Hsing-Huan and Ghosh, Joydeep},
+  abstract =	 {Non-stationary data distributions in evolving graphs
+                  can create problems for deployed graph neural
+                  networks (GNN), such as fraud detection GNNs that
+                  can become ineffective when fraudsters alter their
+                  patterns. The aim of this study is to investigate
+                  how to incrementally adapt graph neural networks to
+                  incoming, unlabeled graph data after training and
+                  deployment. To achieve this, we propose a new
+                  approach called graph contrastive self-training
+                  (GCST) that combines contrastive learning and
+                  self-training to alleviate performance drop. To
+                  evaluate the effectiveness of our approach, we
+                  conduct a comprehensive empirical evaluation on four
+                  diverse graph datasets, comparing it to
+                  domain-invariant feature learning methods and plain
+                  self-training methods. Our contribution is
+                  three-fold: we formulate and study incremental
+                  unsupervised domain adaptation on evolving graphs,
+                  present an approach that integrates contrastive
+                  learning and self-training, and conduct a
+                  comprehensive empirical evaluation of our approach,
+                  which demonstrates its stability and superiority
+                  over other methods.},
+  year =	 2023,
+  pages =	 {683-702},
+  video =	 {https://youtu.be/y59GEQObVSA},
+}
+
+@InProceedings{rafiee23,
+  title =	 {Auxiliary task discovery through generate-and-test},
+  author =	 {Rafiee, Banafsheh and Ghiassian, Sina and Jin, Jun
+                  and Sutton, Richard and Luo, Jun and White, Adam},
+  abstract =	 {In this paper, we explore an approach to auxiliary
+                  task discovery in reinforcement learning based on
+                  ideas from representation learning. Auxiliary tasks
+                  tend to improve data efficiency by forcing the agent
+                  to learn auxiliary prediction and control objectives
+                  in addition to the main task of maximizing reward,
+                  and thus producing better representations. Typically
+                  these tasks are designed by people. Meta-learning
+                  offers a promising avenue for automatic task
+                  discovery; however, these methods are
+                  computationally expensive and challenging to tune in
+                  practice. In this paper, we explore a complementary
+                  approach to the auxiliary task discovery:
+                  continually generating new auxiliary tasks and
+                  preserving only those with high utility. We also
+                  introduce a new measure of auxiliary tasks'
+                  usefulness based on how useful the features induced
+                  by them are for the main task. Our discovery
+                  algorithm significantly outperforms random tasks and
+                  learning without auxiliary tasks across a suite of
+                  environments. },
+  year =	 2023,
+  pages =	 {703-714},
+  video =	 {https://youtu.be/ODMZefLPsHA},
+}
+
+@InProceedings{alami23,
+  title =	 {Restarted Bayesian Online Change-point Detection for
+                  Non-Stationary Markov Decision Processes},
+  author =	 {Alami, Reda and Mahfoud, Mohammed and Moulines,
+                  Eric},
+  abstract =	 {We consider the problem of learning in a
+                  non-stationary reinforcement learning (RL)
+                  environment, where the setting can be fully
+                  described by a piecewise stationary discrete-time
+                  Markov decision process (MDP). We introduce a
+                  variant of the Restarted Bayesian Online
+                  Change-Point Detection algorithm (R-BOCPD) that
+                  operates on input streams originating from the more
+                  general multinomial distribution and provides
+                  near-optimal theoretical guarantees in terms of
+                  false-alarm rate and detection delay. Based on this,
+                  we propose an improved version of the UCRL2
+                  algorithm for MDPs with state transition kernel
+                  sampled from a multinomial distribution, which we
+                  call R-BOCPD-UCRL2. We perform a finite-time
+                  performance analysis and show that R-BOCPD-UCRL2
+                  enjoys a favorable regret bound of
+                  $\mathcal{O}\left(D O \sqrt{A T K_T \log\left
+                  (\frac{T}{\delta} \right)} + \frac{K_T \log
+                  \frac{K_T}{\delta}}{\min\limits_\ell \:
+                  KL(\boldsymbol{\theta}^{(\ell+1)},\boldsymbol{\theta}^{(\ell)})}
+                  \right)$, where $D$ is the largest MDP diameter from
+                  the set of MDPs defining the piecewise stationary
+                  MDP setting, $O$ is the finite number of states
+                  (constant over all changes), $A$ is the finite
+                  number of actions (constant over all changes), $K_T$
+                  is the number of change points, and
+                  $\boldsymbol{\theta}^{(\ell)}$ is the transition
+                  kernel during the interval $[c_\ell, c_{\ell+1})$,
+                  which we assume to be multinomially distributed over
+                  the set of states $\mathsf{O}$. Interestingly, the
+                  performance bound does not directly scale with the
+                  variation in MDP state transition distributions and
+                  rewards, ie. can also model abrupt changes.  In
+                  practice, R-BOCPD-UCRL2 outperforms the
+                  state-of-the-art in a variety of scenarios in
+                  synthetic environments. We provide a detailed
+                  experimental setup along with a code repository
+                  (upon publication) that can be used to easily
+                  reproduce our experiments.},
+  year =	 2023,
+  pages =	 {715-744},
+  video =	 {https://youtu.be/rE-DOTgmdPk},
+}
+
+@InProceedings{asis23,
+  title =	 {Value-aware Importance Weighting for Off-policy
+                  Reinforcement Learning},
+  author =	 {De Asis, Kristopher and Graves, Eric and Sutton,
+                  Richard S.},
+  abstract =	 {Importance sampling is a central idea underlying
+                  off-policy prediction in reinforcement learning. It
+                  provides a strategy for re-weighting samples from a
+                  distribution to represent unbiased estimates of
+                  another distribution. However, importance sampling
+                  weights tend to be of high variance, often leading
+                  to stability issues in practice. In this work, we
+                  consider a broader class of importance weights to
+                  correct samples in off-policy learning. We propose
+                  the use of value-aware importance weights which take
+                  into account the sample space to provide lower
+                  variance, but still unbiased, estimates under a
+                  target distribution. We derive how such weights can
+                  be computed, and detail key properties of the
+                  resulting importance weights. We then extend several
+                  reinforcement learning prediction algorithms to the
+                  off-policy setting with these weights, and evaluate
+                  them empirically.},
+  year =	 2023,
+  pages =	 {745-763},
+  video =	 {https://youtu.be/-88AajCORL0},
+}
+
+@InProceedings{legate23,
+  title =	 {Re-Weighted Softmax Cross-Entropy to Control
+                  Forgetting in Federated Learning},
+  author =	 {Legate, Gwen and Caccia, Lucas and Belilovsky,
+                  Eugene},
+  abstract =	 {In Federated Learning a global model is learned by
+                  aggregating model updates computed at a set of
+                  independent client nodes. To reduce communication
+                  costs, multiple gradient steps are performed at each
+                  node prior to aggregation. A key challenge in this
+                  setting is data heterogeneity across clients
+                  resulting in differing local objectives. This can
+                  lead clients to overly minimize their own local
+                  objective consequently diverging from the global
+                  solution. We demonstrate that individual client
+                  models experience a catastrophic forgetting with
+                  respect to data from other clients and propose an
+                  efficient approach that modifies the cross-entropy
+                  objective on a per-client basis by re-weighting the
+                  softmax logits prior to computing the loss. This
+                  approach shields classes outside a client’s label
+                  set from abrupt representation change and we
+                  empirically demonstrate it can alleviate client
+                  forgetting and provide consistent improvements to
+                  standard federated learning algorithms. Our method
+                  is particularly beneficial under the most
+                  challenging federated learning settings where data
+                  heterogeneity is high and client participation in
+                  each round is low.},
+  year =	 2023,
+  pages =	 {764-780},
+  video =	 {https://youtu.be/WskGNT0TwBI},
+}
+
+@InProceedings{liu23,
+  title =	 {Measuring and Mitigating Interference in
+                  Reinforcement Learning},
+  author =	 {Liu, Vincent and Wang, Han and Tao, Ruo Yu and
+                  Javed, Khurram and White, Adam and White, Martha},
+  abstract =	 {Catastrophic interference is common in many
+                  network-based learning systems, and many proposals
+                  exist for mitigating it. Before overcoming
+                  interference we must understand it better. In this
+                  work, we provide a definition and novel measure of
+                  interference for value-based reinforcement learning
+                  methods such as Fitted Q-Iteration and DQN. We
+                  systematically evaluate our measure of interference,
+                  showing that it correlates with instability in
+                  control performance, across a variety of network
+                  architectures. Our new interference measure allows
+                  us to ask novel scientific questions about commonly
+                  used deep learning architectures and study learning
+                  algorithms which mitigate interference. Lastly, we
+                  outline a class of algorithms which we call
+                  online-aware that are designed to mitigate
+                  interference, and show they do reduce interference
+                  according to our measure and that they improve
+                  stability and performance in several classic control
+                  environments.},
+  year =	 2023,
+  pages =	 {781-795},
+  video =	 {https://youtu.be/aaJWQQSlV_w},
+}
+
+@InProceedings{friedman23,
+  title =	 {Adaptive Meta-Learning via data-dependent PAC-Bayes
+                  bounds},
+  author =	 {Friedman, Lior and Meir, Ron},
+  abstract =	 {Meta-learning aims to extract common knowledge from
+                  similar training tasks in order to facilitate
+                  efficient and effective learning on future
+                  tasks. Several recent works have extended PAC-Bayes
+                  generalization error bounds to the meta-learning
+                  setting.  By doing so, prior knowledge can be
+                  incorporated in the form of a distribution over
+                  hypotheses that is expected to lead to low error on
+                  new tasks that are similar to those that have been
+                  previously observed.  In this work, we develop novel
+                  bounds for the generalization error on test tasks
+                  based on recent data-dependent bounds and provide a
+                  novel algorithm for adapting prior knowledge to
+                  downstream tasks in a potentially more effective
+                  manner.  We demonstrate the effectiveness of our
+                  algorithm numerically for few-shot image
+                  classification tasks with deep neural networks and
+                  show a significant reduction in generalization error
+                  without any additional adaptation data.},
+  year =	 2023,
+  pages =	 {796-810},
+  video =	 {https://youtu.be/dG1mmlu4Mec},
+}
+
+@InProceedings{mcclurg23,
+  title =	 {Active Class Selection for Few-Shot
+                  Class-Incremental Learning},
+  author =	 {McClurg, Christopher and Ayub, Ali and Tyagi, Harsh
+                  and Rajtmajer, Sarah M. and Wagner, Alan R.},
+  abstract =	 {For real-world applications, robots will need to
+                  continually learn in their environments through
+                  limited interactions with their users. Toward this,
+                  previous works in few-shot class incremental
+                  learning (FSCIL) and active class selection (ACS)
+                  have achieved promising results but were tested in
+                  constrained setups. Therefore, in this paper, we
+                  combine ideas from FSCIL and ACS to develop a novel
+                  framework that can allow an autonomous agent to
+                  continually learn new objects by asking its users to
+                  label only a few of the most informative objects in
+                  the environment. To this end, we build on a
+                  state-of-the-art (SOTA) FSCIL model and extend it
+                  with techniques from ACS literature. We term this
+                  model Few-shot Incremental Active class SeleCtiOn
+                  (FIASco). We further integrate a potential
+                  field-based navigation technique with our model to
+                  develop a complete framework that can allow an agent
+                  to process and reason on its sensory data through
+                  the FIASco model, navigate towards the most
+                  informative object in the environment, gather data
+                  about the object through its sensors and
+                  incrementally update the FIASco model. Experimental
+                  results on a simulated agent and a real robot show
+                  the significance of our approach for long-term
+                  real-world robotics applications.},
+  year =	 2023,
+  pages =	 {811-827},
+  video =	 {https://youtu.be/kbUVHAmREcY},
+}
+
+@InProceedings{soutif--cormerais23,
+  title =	 {Improving Online Continual Learning Performance and
+                  Stability with Temporal Ensembles},
+  author =	 {Soutif--Cormerais, Albin and Carta, Antonio and van
+                  de Weijer, Joost},
+  abstract =	 {Neural networks are very effective when trained on
+                  large datasets for a large number of
+                  iterations. However, when they are trained on
+                  non-stationary streams of data and in an online
+                  fashion, their performance is reduced (1) by the
+                  online setup, which limits the availability of data,
+                  (2) due to catastrophic forgetting because of the
+                  non-stationary nature of the data. Furthermore,
+                  several recent works (Caccia et al. 2022, Lange et
+                  al. 2023) showed that replay methods used in
+                  continual learning suffer from the \textit{stability
+                  gap}, encountered when evaluating the model
+                  continually (rather than only on task
+                  boundaries). In this article, we study the effect of
+                  model ensembling as a way to improve performance and
+                  stability in online continual learning. We notice
+                  that naively ensembling models coming from a variety
+                  of training tasks increases the performance in
+                  online continual learning considerably. Starting
+                  from this observation, and drawing inspirations from
+                  semi-supervised learning ensembling methods, we use
+                  a lightweight temporal ensemble that computes the
+                  exponential moving average of the weights (EMA) at
+                  test time, and show that it can drastically increase
+                  the performance and stability when used in
+                  combination with several methods from the
+                  literature.},
+  year =	 2023,
+  pages =	 {828-845},
+  video =	 {https://youtu.be/YbiZHIs9sfw},
+}
+
+@InProceedings{xu23,
+  title =	 {Model-Based Meta Automatic Curriculum Learning},
+  author =	 {Xu, Zifan and Zhang, Yulin and Shperberg, Shahaf
+                  S. and Mirsky, Reuth and Jiang, Yuqian and Liu, Bo
+                  and Stone, Peter},
+  abstract =	 {Curriculum learning (CL) has been widely explored to
+                  facilitate the learning of hard-exploration tasks in
+                  reinforcement learning (RL) by training a sequence
+                  of easier tasks, often called a curriculum. While
+                  most curricula are built either manually or
+                  automatically based on heuristics, e.g. choosing a
+                  training task which is barely beyond the current
+                  abilities of the learner, the fact that similar
+                  tasks might benefit from similar curricula motivates
+                  us to explore meta-learning as a technique for
+                  curriculum generation or teaching for a distribution
+                  of similar tasks. This paper formulates the meta CL
+                  problem that requires a meta-teacher to generate the
+                  curriculum which will assist the student to train
+                  toward any given target task from a task
+                  distribution based on the similarity of these tasks
+                  to one another. We propose a model-based meta
+                  automatic curriculum learning algorithm (MM-ACL)
+                  that learns to predict the performance improvement
+                  on one task when the student is trained on another,
+                  given the current status of the student. This
+                  predictor can then be used to generate the curricula
+                  for different target tasks. Our empirical results
+                  demonstrate that MM-ACL outperforms the
+                  state-of-the-art CL algorithms in a grid-world
+                  domain and a more complex visual-based navigation
+                  domain in terms of sample efficiency.},
+  year =	 2023,
+  pages =	 {846-860},
+  video =	 {https://youtu.be/z5-NxbCvLLA},
+}
+
+@InProceedings{nekoei23b,
+  title =	 {Towards Few-shot Coordination: Revisiting Ad-hoc
+                  Teamplay Challenge In the Game of Hanabi},
+  author =	 {Nekoei, Hadi and Zhao, Xutong and Rajendran,
+                  Janarthanan and Liu, Miao and Chandar, Sarath},
+  abstract =	 {Cooperative Multi-agent Reinforcement Learning
+                  (MARL) algorithms with Zero-Shot Coordination (ZSC)
+                  have gained significant attention in recent
+                  years. ZSC refers to the ability of agents to
+                  coordinate with independently trained agents. While
+                  ZSC is crucial for cooperative MARL agents, it might
+                  not be possible for complex tasks and changing
+                  environments. Agents also need to adapt and improve
+                  their performance with minimal interaction with
+                  other agents. In this work, we show empirically that
+                  state-of-the-art ZSC algorithms have poor
+                  performance when paired with agents trained with
+                  different methods, and they require millions of
+                  samples to adapt to these new partners. To
+                  investigate this issue, we formally defined a
+                  framework based on a popular cooperative multi-agent
+                  game called Hanabi to evaluate the adaptability of
+                  MARL methods. In particular, we created a diverse
+                  set of pre-trained agents and defined a new metric
+                  called adaptation regret that measures the agent's
+                  ability to efficiently adapt and improve its
+                  coordination performance when paired with some
+                  held-out pool of partners on top of its ZSC
+                  performance. After evaluating several SOTA
+                  algorithms using our framework, our experiments
+                  reveal that naive Independent Q-Learning (IQL)
+                  agents in most cases adapt as quickly as the SOTA
+                  ZSC algorithm Off-Belief Learning (OBL). This
+                  finding raises an interesting research question: How
+                  to design MARL algorithms with high ZSC performance
+                  and capability of fast adaptation to unseen
+                  partners. As a first step, we studied the role of
+                  different hyper-parameters and design choices on the
+                  adaptability of current MARL algorithms. Our
+                  experiments show that two categories of
+                  hyper-parameters controlling the data diversity and
+                  optimization process have a significant impact on
+                  the adaptability of Hanabi agents. We hope this
+                  initial analysis will inspire more work on designing
+                  both general and adaptive MARL algorithms.},
+  year =	 2023,
+  pages =	 {861-877},
+  video =	 {https://youtu.be/E57zkZ6Z8ak},
+}
+
+@InProceedings{patacchiola23,
+  title =	 {Comparing the Efficacy of Fine-Tuning and
+                  Meta-Learning for Few-Shot Policy Imitation},
+  author =	 {Patacchiola, Massimiliano and Sun, Mingfei and
+                  Hofmann, Katja and Turner, Richard E.},
+  abstract =	 {In this paper we explore few-shot imitation learning
+                  for control problems, which involves learning to
+                  imitate a target policy by accessing a limited set
+                  of offline rollouts. This setting has been
+                  relatively under-explored despite its relevance to
+                  robotics and control applications. State-of-the-art
+                  methods developed to tackle few-shot imitation rely
+                  on meta-learning, which is expensive to train as it
+                  requires access to a distribution over tasks
+                  (rollouts from many target policies and variations
+                  of the base environment). Given this limitation we
+                  investigate an alternative approach, fine-tuning, a
+                  family of methods that pretrain on a single dataset
+                  and then fine-tune on unseen domain-specific
+                  data. Recent work has shown that fine-tuners
+                  outperform meta-learners in few-shot image
+                  classification tasks, especially when the data is
+                  out-of-domain. Here we evaluate to what extent this
+                  is true for control problems, proposing a simple yet
+                  effective baseline which relies on two stages: (i)
+                  training a base policy online via reinforcement
+                  learning (e.g. Soft Actor-Critic) on a single base
+                  environment, (ii) fine-tuning the base policy via
+                  behavioral cloning on a few offline rollouts of the
+                  target policy. Despite its simplicity this baseline
+                  is competitive with meta-learning methods on a
+                  variety of conditions and is able to imitate target
+                  policies trained on unseen variations of the
+                  original environment. Importantly, the proposed
+                  approach is practical and easy to implement, as it
+                  does not need any complex meta-training protocol. As
+                  a further contribution, we release an open source
+                  dataset called iMuJoCo (iMitation MuJoCo) consisting
+                  of 154 variants of popular OpenAI-Gym MuJoCo
+                  environments with associated pretrained target
+                  policies and rollouts, which can be used by the
+                  community to study few-shot imitation learning and
+                  offline reinforcement learning.},
+  year =	 2023,
+  pages =	 {878-908},
+  video =	 {https://youtu.be/JPGPRvVac9M},
+}
+
+@InProceedings{ozmen23,
+  title =	 {Substituting Data Annotation with Balanced
+                  Neighbourhoods and Collective Loss in Multi-label
+                  Text Classification},
+  author =	 {Ozmen, Muberra and Cotnareanu, Joseph and Coates,
+                  Mark},
+  abstract =	 {Multi-label text classification (MLTC) is the task
+                  of assigning multiple labels to a given text, and
+                  has a wide range of application domains. Most
+                  existing approaches require an enormous amount of
+                  annotated data to learn a classifier and/or a set of
+                  well-defined constraints on the label space
+                  structure, such as hierarchical relations which may
+                  be complicated to provide as the number of labels
+                  increases.  In this paper, we study the MLTC problem
+                  in annotation-free and scarce-annotation settings in
+                  which the magnitude of available supervision signals
+                  is linear to the number of labels.  Our method
+                  follows three steps, (1) mapping input text into a
+                  set of preliminary label likelihoods by natural
+                  language inference using a pre-trained language
+                  model, (2) calculating a signed label dependency
+                  graph by label descriptions, and (3) updating the
+                  preliminary label likelihoods with message passing
+                  along the label dependency graph, driven with a
+                  collective loss function that injects the
+                  information of expected label frequency and average
+                  multi-label cardinality of predictions. The
+                  experiments show that the proposed framework
+                  achieves effective performance under low supervision
+                  settings with almost imperceptible computational and
+                  memory overheads added to the usage of pre-trained
+                  language model outperforming its initial performance
+                  by 70\% in terms of example-based F1 score. },
+  year =	 2023,
+  pages =	 {909-922},
+  video =	 {https://youtu.be/kmALNjGE0Ok},
+}
+
+@InProceedings{srinivasan23,
+  title =	 {I2I: Initializing Adapters with Improvised
+                  Knowledge},
+  author =	 {Srinivasan, Tejas and Jia, Furong and Rostami,
+                  Mohammad and Thomason, Jesse},
+  abstract =	 {Adapters present a promising solution to the
+                  catastrophic forgetting problem in continual
+                  learning. However, training independent Adapter
+                  modules for every new task misses an opportunity for
+                  cross-task knowledge transfer. We propose Improvise
+                  to Initialize (I2I), a continual learning algorithm
+                  that initializes Adapters for incoming tasks by
+                  distilling knowledge from previously-learned tasks'
+                  Adapters. We evaluate I2I on CLiMB, a multimodal
+                  continual learning benchmark, by conducting
+                  experiments on sequences of visual question
+                  answering tasks.  Adapters trained with I2I
+                  consistently achieve better task accuracy than
+                  independently-trained Adapters, demonstrating that
+                  our algorithm facilitates knowledge transfer between
+                  task Adapters. I2I also results in better cross-task
+                  knowledge transfer than the state-of-the-art
+                  AdapterFusion without incurring the associated
+                  parametric cost.},
+  year =	 2023,
+  pages =	 {923-935},
+  video =	 {https://youtu.be/ya25hUjF8iI},
+}
+
+@InProceedings{nath23,
+  title =	 {Sharing Lifelong Reinforcement Learning Knowledge
+                  via Modulating Masks},
+  author =	 {Nath, Saptarshi and Peridis, Christos and
+                  Ben-Iwhiwhu, Eseoghene and Liu, Xinran and Dora,
+                  Shirin and Liu, Cong and Kolouri, Soheil and
+                  Soltoggio, Andrea},
+  abstract =	 {Lifelong learning agents aim to learn multiple tasks
+                  sequentially over a lifetime. This involves the
+                  ability to exploit previous knowledge when learning
+                  new tasks and to avoid forgetting. Recently,
+                  modulating masks, a specific type of parameter
+                  isolation approach, have shown promise in both
+                  supervised and reinforcement learning. While
+                  lifelong learning algorithms have been investigated
+                  mainly within a single-agent approach, a question
+                  remains on how multiple agents can share lifelong
+                  learning knowledge with each other. We show that the
+                  parameter isolation mechanism used by modulating
+                  masks is particularly suitable for exchanging
+                  knowledge among agents in a distributed and
+                  decentralized system of lifelong learners. The key
+                  idea is that isolating specific task knowledge to
+                  specific masks allows agents to transfer only
+                  specific knowledge on-demand, resulting in a robust
+                  and effective collective of agents.  We assume fully
+                  distributed and asynchronous scenarios with dynamic
+                  agent numbers and connectivity. An on-demand
+                  communication protocol ensures agents query their
+                  peers for specific masks to be transferred and
+                  integrated into their policies when facing each
+                  task. Experiments indicate that on-demand mask
+                  communication is an effective way to implement
+                  distributed and decentralized lifelong reinforcement
+                  learning, and provides a lifelong learning benefit
+                  with respect to distributed RL baselines such as
+                  DD-PPO, IMPALA, and PPO+EWC. The system is
+                  particularly robust to connection drops and
+                  demonstrates rapid learning due to knowledge
+                  exchange.},
+  year =	 2023,
+  pages =	 {936-960},
+  video =	 {https://youtu.be/HRIuUnSXHKo},
+}
+
+@InProceedings{doan23,
+  title =	 {Continual Learning Beyond a Single Model},
+  author =	 {Doan, Thang and Mirzadeh, Seyed Iman and Farajtabar,
+                  Mehrdad},
+  abstract =	 {A growing body of research in continual learning
+                  focuses on the catastrophic forgetting
+                  problem. While many attempts have been made to
+                  alleviate this problem, the majority of the methods
+                  assume a \textit{single model} in the continual
+                  learning setup. In this work, we question this
+                  assumption and show that employing \textit{ensemble
+                  models} can be a simple yet effective method to
+                  improve continual performance. However, ensembles'
+                  training and inference costs can increase
+                  significantly as the number of models
+                  grows. Motivated by this limitation, we study
+                  different ensemble models to understand their
+                  benefits and drawbacks in continual learning
+                  scenarios. Finally, to overcome the high compute
+                  cost of ensembles, we leverage recent advances in
+                  neural network subspace to propose a computationally
+                  cheap algorithm with similar runtime to a single
+                  model yet enjoying the performance benefits of
+                  ensembles.},
+  year =	 2023,
+  pages =	 {961-991},
+  video =	 {https://youtu.be/QWBmFkIGUls},
+}
+
+@InProceedings{madireddy23,
+  title =	 {Improving Performance in Continual Learning Tasks
+                  using Bio-Inspired Architectures},
+  author =	 {Madireddy, Sandeep and Yanguas-Gil, Angel and
+                  Balaprakash, Prasanna},
+  abstract =	 {The ability to learn continuously from an incoming
+                  data stream without catastrophic forgetting is
+                  critical to designing intelligent systems. Many
+                  approaches to continual learning rely on stochastic
+                  gradient descent and its variants that employ global
+                  error updates, and hence need to adopt strategies
+                  such as memory buffers or replay to circumvent its
+                  stability, greed, and short-term memory
+                  limitations. To address this limitation, we have
+                  developed a biologically inspired lightweight neural
+                  network architecture that incorporates synaptic
+                  plasticity mechanisms and neuromodulation and hence
+                  learns through local error signals to enable online
+                  continual learning without stochastic gradient
+                  descent. Our approach leads to superior online
+                  continual learning performance on Split-MNIST,
+                  Split-CIFAR-10, and Split-CIFAR-100 datasets
+                  compared to other memory-constrained learning
+                  approaches and matches that of the state-of-the-art
+                  memory-intensive replay-based approaches. We further
+                  demonstrate the effectiveness of our approach by
+                  integrating key design concepts into other
+                  backpropagation-based continual learning algorithms,
+                  significantly improving their accuracy. Our results
+                  provide compelling evidence for the importance of
+                  incorporating biological principles into machine
+                  learning models and offer insights into how we can
+                  leverage them to design more efficient and robust
+                  systems for online continual learning.},
+  year =	 2023,
+  pages =	 {992-1008},
+  video =	 {https://youtu.be/t_nfxTzKAxU},
+}
+
+@InProceedings{asadulaev23,
+  title =	 {A Minimalist Approach for Domain Adaptation with
+                  Optimal Transport},
+  author =	 {Asadulaev, Arip and Shutov, Vitaly and Korotin,
+                  Alexander and Panfilov, Alexander and Kontsevaya,
+                  Vladislava and Filchenkov, Andrey},
+  abstract =	 {We reveal an intriguing connection between
+                  adversarial attacks and cycle monotone maps, also
+                  known as optimal transport maps. Based on this
+                  finding, we developed a novel method named
+                  \textit{source fiction} for semi-supervised optimal
+                  transport-based domain adaptation. We conduct
+                  experiments on various datasets and show that our
+                  method can notably improve the performance of the
+                  optimal transport solvers in domain adaptation.},
+  year =	 2023,
+  pages =	 {1009-1024},
+  video =	 {https://youtu.be/LyMj8RQIBzA},
+}
+
+@InProceedings{chang23,
+  title =	 {Low-rank extended Kalman filtering for online
+                  learning of neural networks from streaming data},
+  author =	 {Chang, Peter G. and Dur\'an-Mart\'in, Gerardo and
+                  Shestopaloff, Alex and Jones, Matt and Murphy, Kevin
+                  Patrick},
+  abstract =	 {We propose an efficient online approximate Bayesian
+                  inference algorithm for estimating the parameters of
+                  a nonlinear function from a potentially
+                  non-stationary data stream. The method is based on
+                  the extended Kalman filter (EKF), but uses a novel
+                  low-rank plus diagonal decomposition of the
+                  posterior precision matrix, which gives a cost per
+                  step which is linear in the number of model
+                  parameters. In contrast to methods based on
+                  stochastic variational inference, our method is
+                  fully deterministic, and does not require step-size
+                  tuning. We show experimentally that this results in
+                  much faster (more sample efficient) learning, which
+                  results in more rapid adaptation to changing
+                  distributions, and faster accumulation of reward
+                  when used as part of a contextual bandit algorithm.},
+  year =	 2023,
+  pages =	 {1025-1071},
+  video =	 {https://youtu.be/vL41VM147rI},
+}
+
+@InProceedings{campbell23,
+  title =	 {Introspective Action Advising for Interpretable
+                  Transfer Learning},
+  author =	 {Campbell, Joseph and Guo, Yue and Xie, Fiona and
+                  Stepputtis, Simon and Sycara, Katia},
+  abstract =	 {Transfer learning can be applied in deep
+                  reinforcement learning to accelerate the training of
+                  a policy in a target task by transferring knowledge
+                  from a policy learned in a related source task. This
+                  is commonly achieved by copying pretrained weights
+                  from the source policy to the target policy prior to
+                  training, under the constraint that they use the
+                  same model architecture. However, not only does this
+                  require a robust representation learned over a wide
+                  distribution of states – often failing to transfer
+                  between specialist models trained over single tasks
+                  – but it is largely uninterpretable and provides
+                  little indication of what knowledge is
+                  transferred. In this work, we propose an alternative
+                  approach to transfer learning between tasks based on
+                  action advising, in which a teacher trained in a
+                  source task actively guides a student’s exploration
+                  in a target task. Through introspection, the teacher
+                  is capable of identifying when advice is beneficial
+                  to the student and should be given, and when it is
+                  not. Our approach allows knowledge transfer between
+                  policies agnostic of the underlying representations,
+                  and we empirically show that this leads to improved
+                  convergence rates in Gridworld and Atari
+                  environments while providing insight into what
+                  knowledge is transferred.  },
+  year =	 2023,
+  pages =	 {1072-1090},
+  video =	 {https://youtu.be/QIsmM1fpZKI},
+}
+
+@InProceedings{sun23,
+  title =	 {SF-FSDA: Source-Free Few-Shot Domain Adaptive Object
+                  Detection with Efficient Labeled Data Factory},
+  author =	 {Sun, Han and Gong, Rui and Schindler, Konrad and Van
+                  Gool, Luc},
+  abstract =	 {Domain adaptive object detection aims to leverage
+                  the knowledge learned from a labeled source domain
+                  to improve the performance on an unlabeled target
+                  domain. Prior works typically require the access to
+                  the source domain data for adaptation, and the
+                  availability of sufficient data on the target
+                  domain. However, these assumptions may not hold due
+                  to data privacy and rare data collection. In this
+                  paper, we propose and investigate a more practical
+                  and challenging domain adaptive object detection
+                  problem under both source-free and few-shot
+                  conditions, named as SF-FSDA. To overcome this
+                  problem, we develop an efficient labeled data
+                  factory based approach. Without accessing the source
+                  domain, the data factory renders i) infinite amount
+                  of synthesized target-domain like images, under the
+                  guidance of the few-shot image samples and text
+                  description from the target domain; ii)
+                  corresponding bounding box and category annotations,
+                  only demanding minimum human effort, i.e., a few
+                  manually labeled examples. On the one hand, the
+                  synthesized images mitigate the knowledge
+                  insufficiency brought by the few-shot condition. On
+                  the other hand, compared to the popular pseudo-label
+                  technique, the generated annotations from data
+                  factory not only get rid of the reliance on the
+                  source pretrained object detection model, but also
+                  alleviate the unavoidably pseudo-label noise due to
+                  domain shift and source-free condition. The
+                  generated dataset is further utilized to adapt the
+                  source pretrained object detection model, realizing
+                  the robust object detection under SF-FSDA. The
+                  experiments on different settings showcase that our
+                  proposed approach outperforms other state-of-the-art
+                  methods on SF-FSDA problem. Our codes and models
+                  will be made publicly available.},
+  year =	 2023,
+  pages =	 {1091-1111},
+  video =	 {https://youtu.be/MqnlTxllczs},
+}

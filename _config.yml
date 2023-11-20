@@ -1,0 +1,87 @@
+---
+booktitle: Proceedings of The 2nd Conference on Lifelong Learning Agents
+shortname: CoLLAs
+volume: '232'
+year: '2023'
+start: 2023-08-22
+end: 2023-08-25
+published: 2023-11-20
+conference_number: '2'
+layout: proceedings
+series: Proceedings of Machine Learning Research
+publisher: PMLR
+issn: 2640-3498
+id: CoLLAs-2023
+month: 0
+cycles: false
+bibtex_editor: Chandar, Sarath and Pascanu, Razvan and Sedghi, Hanie and Precup, Doina
+editor:
+- given: Sarath
+  family: Chandar
+- given: Razvan
+  family: Pascanu
+- given: Hanie
+  family: Sedghi
+- given: Doina
+  family: Precup
+title: Proceedings of Machine Learning Research
+description: |
+  Proceedings of The 2nd Conference on Lifelong Learning Agents
+    Held in McGill University, Montr'{e}al, Qu'{e}bec, Canada on 22-25 August 2023
+
+  Published as Volume 232 by the Proceedings of Machine Learning Research on 20 November 2023.
+
+  Volume Edited by:
+    Sarath Chandar
+    Razvan Pascanu
+    Hanie Sedghi
+    Doina Precup
+
+  Series Editors:
+    Neil D. Lawrence
+date_str: 22--25 Aug
+url: https://proceedings.mlr.press
+author:
+  name: PMLR
+baseurl: "/v232"
+twitter_username: MLResearchPress
+github_username: mlresearch
+markdown: kramdown
+exclude:
+- README.md
+- Gemfile
+- ".gitignore"
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-remote-theme
+remote_theme: mlresearch/jekyll-theme
+style: pmlr
+permalink: "/:title.html"
+ghub:
+  edit: true
+  repository: v232
+display:
+  copy_button:
+    bibtex: true
+    endnote: true
+    apa: true
+  comments: false
+volume_type: Volume
+volume_dir: v232
+email: ''
+conference:
+  name: Conference on Lifelong Learning Agents
+  url: https://lifelong-ml.cc/
+  location: McGill University, Montr’eal, Qu’ebec, Canada
+  dates:
+  - 2023-08-22
+  - 2023-08-23
+  - 2023-08-24
+  - 2023-08-25
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+orig_bibfile: "/Users/neil/mlresearch/v232/Collas2023.bib"
+# Site settings
+# Original source:  /Users/neil/mlresearch/v232/Collas2023.bib
