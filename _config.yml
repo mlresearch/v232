@@ -27,7 +27,7 @@ editor:
 title: Proceedings of Machine Learning Research
 description: |
   Proceedings of The 2nd Conference on Lifelong Learning Agents
-    Held in McGill University, Montr'{e}al, Qu'{e}bec, Canada on 22-25 August 2023
+    Held in McGill University, Montréal, Québec, Canada on 22-25 August 2023
 
   Published as Volume 232 by the Proceedings of Machine Learning Research on 20 November 2023.
 
@@ -73,7 +73,7 @@ email: ''
 conference:
   name: Conference on Lifelong Learning Agents
   url: https://lifelong-ml.cc/
-  location: McGill University, Montr’eal, Qu’ebec, Canada
+  location: McGill University, Montréal, Québec, Canada
   dates:
   - 2023-08-22
   - 2023-08-23
